@@ -1,0 +1,493 @@
+PR checks pipeline: lint, unit tests, SAST, build artifacts, PR status gates    ( done ) 
+
+Required reviews + branch protection rules
+
+Trunk-based CI: fast checks, merge queue, auto-rebase
+
+Release tagging pipeline with semantic versioning
+
+Automated changelog generation
+
+Signed Git tags for releases
+
+Artifact promotion: build once, promote dev → stage → prod
+
+Environment-specific approvals for prod
+
+Monorepo pipeline with path-based builds
+
+Dependency-aware builds in monorepos
+
+Multi-language pipeline (Node + Java + Python)
+
+CI cache optimization across languages
+
+Feature flags integration (dark deploys)
+
+Progressive rollout via feature flags per cohort
+
+Blue/green deployment with traffic switch
+
+Canary deployment (5% → 25% → 50% → 100%)
+
+Automated rollback on metric regression
+
+Database migrations CI/CD (validate, dry-run, lock, rollback)
+
+Schema drift detection in pipelines
+
+Pipeline concurrency control per environment
+
+Prevent overlapping prod deployments
+
+ChatOps-based deploy approvals
+
+Chat-triggered rollbacks
+
+Pipeline metrics: lead time, deploy frequency, failure rate
+
+DORA metrics dashboard
+
+CI pipeline performance optimization
+
+Release freeze automation
+
+Release notes publishing pipeline
+
+Build reproducibility checks
+
+CI reliability testing (failures, retries, idempotency)
+
+🏗️ INFRASTRUCTURE AS CODE (TERRAFORM / CLOUD)
+
+Terraform remote state with locking
+
+State separation per environment
+
+Reusable Terraform module library
+
+VPC / network baseline modules
+
+IAM module with least privilege defaults
+
+Logging & monitoring Terraform modules
+
+Policy-as-code for Terraform (OPA / Sentinel)
+
+Block public exposure via policy
+
+Mandatory tagging enforcement
+
+Terraform plan review bot in PRs
+
+Drift detection with scheduled plan-only runs
+
+Alert on infrastructure drift
+
+Multi-account / multi-subscription landing zone
+
+Org structure with baseline guardrails
+
+Secretless CI authentication (OIDC / workload identity)
+
+Golden AMI / image pipeline
+
+CIS-hardened base images
+
+Immutable infrastructure rollout (no in-place mutation)
+
+Safe instance replacement strategies
+
+Cloud cost budgets and alerts
+
+Automated cost allocation via tags
+
+Orphan resource cleanup automation
+
+Break-glass access with audit trail
+
+Emergency access approval workflow
+
+Self-service sandbox provisioning per PR
+
+Ephemeral environments with TTL
+
+Environment promotion using same IaC code
+
+Prod approval gates for IaC changes
+
+Disaster recovery IaC (secondary region)
+
+Failover runbook as code
+
+Terraform unit tests for modules
+
+Naming and convention validation
+
+Resource quota enforcement via IaC
+
+Terraform version upgrade automation
+
+Cloud provider quota monitoring
+
+📦 CONTAINERS & IMAGE PIPELINES
+
+Dockerfile hardening (non-root user)
+
+Minimal base images (distroless/alpine)
+
+Dependency pinning strategy
+
+Image scanning gates for critical CVEs
+
+SBOM generation per image
+
+Signed container images (Cosign)
+
+Image verification before deploy
+
+Private registry with auth & immutability
+
+Registry retention policies
+
+Multi-arch image builds (amd64 + arm64)
+
+CI build cache optimization
+
+Layer strategy optimization
+
+Secrets injection at runtime (never baked)
+
+Runtime container security monitoring
+
+Detect exec/network anomalies
+
+Readiness/liveness probe standards
+
+Graceful shutdown handling
+
+One-command local dev via Docker Compose
+
+Prod-like local dependencies
+
+Artifact retention for rollback safety
+
+Image lifecycle management automation
+
+☸️ KUBERNETES FOUNDATIONS & ADVANCED
+
+Kubernetes cluster bootstrap automation
+
+CNI selection and tuning
+
+Ingress controller setup
+
+cert-manager installation and config
+
+metrics-server and resource metrics
+
+Namespace tenancy model
+
+Resource quotas per team
+
+Limit ranges enforcement
+
+RBAC per team/service
+
+Ingress + TLS automation
+
+Certificate rotation strategy
+
+ConfigMaps & Secrets conventions
+
+Secret rotation workflows
+
+Pod Disruption Budgets aligned to SLOs
+
+Safe node drain procedures
+
+Horizontal Pod Autoscaler tuning
+
+Cluster Autoscaler configuration
+
+Autoscaling safety limits
+
+Node pool separation by workload
+
+Cost-optimized node pools
+
+Network policies (default deny)
+
+Service-level allowlists
+
+Admission controllers for security
+
+Enforce non-root containers
+
+Enforce resource requests/limits
+
+Approved registry enforcement
+
+etcd backup automation
+
+App-level data backups
+
+Restore and recovery drills
+
+Service mesh basics (mTLS)
+
+Retries, timeouts, circuit breaking
+
+Mesh-less resiliency patterns
+
+Progressive delivery on Kubernetes
+
+Canary analysis with metrics
+
+Multi-cluster deployment (active/active)
+
+Regional sharding strategy
+
+Kubernetes upgrade playbook
+
+Version skew validation
+
+Staged cluster upgrades
+
+Workload isolation with taints/tolerations
+
+Sensitive workload segregation
+
+Kubernetes cost visibility (Kubecost)
+
+Kubernetes chaos testing
+
+Node failure simulation
+
+🔄 GITOPS & CONFIG DELIVERY
+
+GitOps bootstrap with Argo CD / Flux
+
+App-of-apps pattern
+
+Root repo for cluster bootstrap
+
+Environment overlays via Helm values
+
+Kustomize overlays per env
+
+GitOps promotion workflow (PR-based)
+
+Dev → stage → prod via Git
+
+Secrets management in GitOps
+
+SOPS encryption strategy
+
+SealedSecrets workflow
+
+Vault integration with GitOps
+
+Multi-tenant GitOps repo structure
+
+Per-team application repos
+
+Central platform/policy repo
+
+Baseline policy enforcement via GitOps
+
+Drift detection alerts
+
+Detect manual kubectl changes
+
+Rollback via Git revert
+
+Audit trail for config changes
+
+GitOps + progressive delivery integration
+
+Automated sync waves
+
+GitOps health checks
+
+📊 OBSERVABILITY (LOGS, METRICS, TRACING)
+
+Unified logging (app + ingress + cluster)
+
+Structured JSON logging standards
+
+Log enrichment with metadata
+
+Metrics standards (RED/USE)
+
+Service-level metrics baselines
+
+OpenTelemetry instrumentation
+
+Trace sampling strategies
+
+Golden dashboards per service
+
+Latency, traffic, errors, saturation views
+
+SLO definition per service
+
+Error budget calculation
+
+Burn-rate alerting
+
+Alert severity classification
+
+Alert routing by on-call schedules
+
+Noise reduction & alert deduplication
+
+Synthetic monitoring checks
+
+SLA reporting automation
+
+Frontend RUM monitoring
+
+Client-side error tracking
+
+Capacity forecasting from trends
+
+Predictive autoscaling inputs
+
+Log-based alerts
+
+Pattern and anomaly detection
+
+CI-based performance regression detection
+
+Trace comparison per PR
+
+Incident timeline automation
+
+Correlate deploys, alerts, logs
+
+Post-deploy verification checks
+
+Auto rollback on failed verification
+
+Service dependency mapping
+
+Critical path visibility
+
+Observability-as-code
+
+Dashboards in Git
+
+Alert rules versioned and reviewed
+
+🔐 DEVSECOPS & SUPPLY CHAIN SECURITY
+
+Secrets scanning in commits
+
+Token detection in PRs
+
+SAST integration with merge gating
+
+Risk-based vulnerability thresholds
+
+DAST scanning against staging
+
+API security scanning
+
+Dependency update automation (Renovate)
+
+Approval workflows for risky updates
+
+SBOM generation per release
+
+Build provenance attestation
+
+Verify provenance before deploy
+
+Least-privilege CI roles
+
+Per-job scoped permissions
+
+WAF deployment at ingress
+
+Rate limiting abuse tests
+
+Runtime vulnerability detection
+
+Patch → redeploy automation
+
+Container admission policies
+
+Signed-images-only enforcement
+
+Approved registry enforcement
+
+Secure baseline service templates
+
+“Paved road” developer experience
+
+Compliance evidence automation (SOC2 / ISO)
+
+🚨 SRE, RELIABILITY & OPERATIONS
+
+Blameless postmortem templates
+
+Root cause vs contributing factors
+
+Action item tracking
+
+Incident response GameDays
+
+Injected failure scenarios
+
+Chaos testing (pods, nodes, network)
+
+Safe chaos blast radius controls
+
+Regional failover simulations
+
+Dependency outage simulations
+
+Load testing pipelines
+
+Pre-release performance gates
+
+Rate limiting under load
+
+Circuit breaker validation
+
+Caching strategy rollout
+
+Cache hit-rate analysis
+
+Latency improvement measurement
+
+Runbooks as code
+
+Automated remediation scripts
+
+Guardrails on automation
+
+On-call readiness checklist
+
+Monitoring & alert validation
+
+Access and escalation verification
+
+Reliability scorecard
+
+SLO attainment tracking
+
+Incident count trends
+
+MTTR tracking and reduction
+
+Capacity planning reviews
+
+Traffic forecasting
+
+Self-healing automation
+
+Auto-scaling under failure
+
+Production readiness reviews
