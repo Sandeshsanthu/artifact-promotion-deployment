@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  namespace: dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+        - name: app
+          image: sandeshs/app:88e609778394b8bc718cbb600f80b936737a69ab
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000 # Added space after the dash
