@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: sandeshs/app:88e609778394b8bc718cbb600f80b936737a69ab
+          image: app-image
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000 # Added space after the dash
