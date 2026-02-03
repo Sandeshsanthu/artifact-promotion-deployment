@@ -6,4 +6,4 @@ resources:
 
 replicas:
   - name: app-deployment
-    count: 1 
+    count: 3 
