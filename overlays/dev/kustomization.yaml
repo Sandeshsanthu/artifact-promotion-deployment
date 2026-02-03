@@ -3,11 +3,7 @@ kind: Kustomization
 namespace: dev             # Deploys to QA namespace
 resources:
   - ../../base
-patches:
-  - target:
-      kind: Deployment
-      name: app-deployment
-    patch: |-
-      - op: replace
-        path: /spec/replicas
-        value: 1
+
+replicas:
+  - name: app-deployment
+    count: 1 
