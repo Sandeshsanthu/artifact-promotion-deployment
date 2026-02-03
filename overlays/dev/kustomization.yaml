@@ -10,4 +10,4 @@ replicas:
 images: 
   - name: app-image
     newName: sandeshs/app
-    newTag: 88e609778394b8bc718cbb600f80b936737a69ab
+    newTag: sha256:
