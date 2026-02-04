@@ -1,13 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: qa            # Deploys to QA namespace
+namespace: qa # Deploys to QA namespace
 resources:
   - ../../base
-patches:
-  - target:
-      kind: Deployment
-      name: app-deployment
-    patch: |-
-      - op: replace
-        path: /spec/replicas
-        value: 1
+replicas:
+  - name: app-deployment
+    count: 1
+images:
+  - name: app-image
+    newName: sandeshs/app
+    digest: sha256:3c370e187adb7bd26183023e8e0bfaabcfec45912506ae07672aea193922d6ed
