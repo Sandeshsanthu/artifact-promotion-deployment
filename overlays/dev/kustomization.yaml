@@ -10,4 +10,3 @@ replicas:
 images: 
   - name: app-image
     newName: sandeshs/app
-    newTag: sha256:
