@@ -9,4 +9,4 @@ replicas:
 images:
   - name: app-image
     newName: sandeshs/app
-    digest: sha256:3c370e187adb7bd26183023e8e0bfaabcfec45912506ae07672aea193922d6ed
+    digest: sha256:395ea99714ef0aa2be24f2173d6530d5b71d6706aa6e132c392fc897174db905
